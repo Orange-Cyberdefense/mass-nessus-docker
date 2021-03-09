@@ -1,0 +1,2 @@
+0 1 * * * /root/nessus_clean_old_scans.sh 2>&1
+
