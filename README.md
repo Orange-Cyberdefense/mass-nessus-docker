@@ -18,16 +18,16 @@ Depends on:
 
 After the line `login;password;port;licence`, add a new one on the same model.
 
-No space, don't delete the first line, don't use ";" in the names/login/passwords.
+No space, don't delete the first line, don't use ";" in the login/passwords.
 
 For example : `user1;G00dPassword;8834;AA-BB-CC-DD`.
 
 Add as many lines as containers needed.
 
 ## Optionnal: Delete results every X days
-In my use case, I needed to be sure every result stored on the Nessus instances were deleted every two weeks.
+In my use case, I needed to be sure every result stored on the Nessus instances was deleted every two weeks.
 
-To do so, edit the `Dockerfile` and uncomment the lines 16 to 21. The cron will be executed every hour.
+To do so, edit the `Dockerfile` and uncomment the lines 16 to 21. The cron will be executed every day at 1am.
 
 To change the data retention period, edit the line 18 in `nessus_clean_old_scans.sh`.
 
@@ -38,18 +38,18 @@ The program will first compile plugins, then run through Nessus setup.
 
 Wait for the `[+] Nessus is available on (...)` line to appear, it can take several minutes.
 
-Once done, the container(s) are running.
+Once done, the containers are running.
 
 Depends on:
 - build_container.sh
 - container_details.csv
 
-## 4. Running the container(s)
-You should have the built container(s) available using `$ docker ps -a | grep nessus`.
+## 4. Running the containers
+You should have the built containers available using `$ docker ps -a | grep nessus`.
 
-To run the container(s), execute `$ docker start nessus_docker_container_[name]` for each container.
+To run the containers, execute `$ docker start nessus_docker_container_[name]` for each container.
 
-To check if the container(s) is/are running, run `$ docker ps | grep nessus`. The status and ports are displayed.
+To check if the containers are running, execute `$ docker ps | grep nessus`. The status and ports are displayed.
 
 ## 5. Troubleshoots
 ### *docker: Error response from daemon: --storage-opt is supported only for overlay over xfs with 'pquota' mount option.*
