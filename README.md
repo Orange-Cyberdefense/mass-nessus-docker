@@ -1,5 +1,5 @@
 # Nessus-Docker
-This project has been created prior Tenable published their version of [https://docs.tenable.com/nessus/Content/DeployNessusDocker.htm](dockerised Nessus).
+This project has been created prior Tenable published their version of [dockerised Nessus](https://docs.tenable.com/nessus/Content/DeployNessusDocker.htm).
 
 As the new version of Nessus does not manage multiple users on the same instance, I created this project to deploy multiple instances of Nessus easily, each instance having its own user and its own licence.
 
